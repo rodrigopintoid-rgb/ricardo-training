@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricardo Training — Entrenamiento personalizado en Santiago</title>
+<meta name="description" content="Coaching 1:1 online y presencial desde Santiago. Programación de fuerza basada en biomecánica y sobrecarga progresiva, ajustada a tu semana.">
+<link rel="icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ icon sprite (lucide) ============ -->
+<svg class="rt-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-check" viewBox="0 0 24 24"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-play-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+</svg>
+
+<!-- ============ header ============ -->
+<header class="rt-header">
+  <div class="rt-hdr">
+    <a class="rt-hdr-logo" href="#inicio"><img src="assets/logo.webp" alt="Ricardo Training"></a>
+    <nav class="rt-nav">
+      <a class="is-current" href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#metodo">Método</a>
+      <a href="#precios">Precios</a>
+      <a href="#conoce">Sobre Ricardo</a>
+    </nav>
+    <div class="rt-hdr-right">
+      <a class="rt-hdr-cta" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Agendar<svg class="ico ico-13"><use href="#i-arrow-up-right"/></svg></a>
+      <button class="rt-burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="rt-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ mobile menu ============ -->
+<div class="rt-menu" id="rt-menu" hidden>
+  <div class="rt-menu-top">
+    <span class="rt-menu-brand">Ricardo Training</span>
+    <button class="rt-menu-close" type="button" aria-label="Cerrar"><span></span><span></span></button>
+  </div>
+  <nav class="rt-menu-nav">
+    <a href="#inicio"><span class="rt-menu-ix">01</span><span class="rt-menu-label">Inicio</span></a>
+    <a href="#sobre-mi"><span class="rt-menu-ix">02</span><span class="rt-menu-label">Sobre mí</span></a>
+    <a href="#metodo"><span class="rt-menu-ix">03</span><span class="rt-menu-label">Método</span></a>
+    <a href="#precios"><span class="rt-menu-ix">04</span><span class="rt-menu-label">Precios</span></a>
+    <a href="#conoce"><span class="rt-menu-ix">05</span><span class="rt-menu-label">Sobre Ricardo</span></a>
+  </nav>
+  <div class="rt-menu-foot">
+    <a class="rt-menu-cta" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Agendar evaluación<svg class="ico ico-17"><use href="#i-arrow-right"/></svg></a>
+    <div class="rt-menu-meta">
+      <span>hola@ricardotraining.cl</span>
+      <span>Santiago, Chile</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ hero ============ -->
+<section class="rt-hero" id="inicio">
+  <img class="rt-hero-bg" src="assets/hero-gym-curl.webp" alt="Ricardo entrenando bíceps con barra Z">
+  <img class="rt-hero-bg-desk" src="assets/hero-desktop-wide.webp" alt="Ricardo entrenando bíceps con barra Z">
+  <div class="rt-hero-veil"></div>
+  <div class="rt-hero-veil-desk"></div>
+  <div class="rt-hero-pad">
+    <h1 class="rt-hero-h1">Entrena duro.<br>Vive <span class="rt-hero-word" id="rt-word">Fuerte.</span></h1>
+    <div class="rt-hero-foot">
+      <div class="rt-hero-copy">
+        <div class="rt-hero-rule">
+          <span>+120 alumnos entrenados</span>
+        </div>
+        <p>Coaching 1:1 online y presencial desde Santiago. Programación de fuerza basada en biomecánica y sobrecarga progresiva, ajustado a tu semana.</p>
+      </div>
+      <a class="rt-hero-cta" href="#precios">Explorar planes<svg class="ico ico-17"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ sobre mí ============ -->
+<section class="rt-sec rt-about" id="sobre-mi">
+  <div class="rt-about-grid">
+    <div class="rt-eyebrow">
+      <span class="rt-dot"></span>
+      <span class="rt-eyebrow-txt">Sobre mí</span>
+    </div>
+    <p class="rt-about-lead">Soy Ricardo, <strong>preparador físico titulado</strong>. Diseño planes de fuerza y rendimiento con criterio técnico —biomecánica, RIR y sobrecarga progresiva— para personas con agendas ocupadas que quieren resultados reales. <em>No es motivación: es ciencia y disciplina.</em></p>
+  </div>
+</section>
+
+<!-- ============ método ============ -->
+<section class="rt-sec" id="metodo">
+  <div class="rt-eyebrow">
+    <span class="rt-dot"></span>
+    <span class="rt-eyebrow-txt">Método</span>
+  </div>
+  <div class="rt-head-row">
+    <h2 class="rt-h2 rt-h2--16">Ciclos, no sesiones sueltas</h2>
+    <div class="rt-arrows" data-carousel-nav="metodo">
+      <button class="rt-arrow" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-18"><use href="#i-arrow-left"/></svg></button>
+      <button class="rt-arrow rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-18"><use href="#i-arrow-right"/></svg></button>
+    </div>
+  </div>
+
+  <div class="rt-scroll rt-cards" data-carousel="metodo">
+    <article class="rt-card">
+      <div class="rt-card-media">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&amp;h=760&amp;q=72&amp;fit=crop" alt="Sesión de evaluación en el gimnasio">
+        <span class="rt-card-badge">Sem 1</span>
+      </div>
+      <div class="rt-card-body">
+        <div class="rt-card-meta">
+          <span class="rt-card-ix">01</span>
+          <span class="rt-card-tag">Punto de partida</span>
+        </div>
+        <h3 class="rt-card-title">Evaluación</h3>
+        <p class="rt-card-text">Medimos fuerza, movilidad, historial de lesiones y tu objetivo real.</p>
+        <ul class="rt-card-list">
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Test de fuerza</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Movilidad</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Historial de lesiones</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <div class="rt-card-media">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&amp;h=760&amp;q=72&amp;fit=crop" alt="Barra cargada lista para entrenar">
+        <span class="rt-card-badge">Sem 2</span>
+      </div>
+      <div class="rt-card-body">
+        <div class="rt-card-meta">
+          <span class="rt-card-ix">02</span>
+          <span class="rt-card-tag">Diseño del ciclo</span>
+        </div>
+        <h3 class="rt-card-title">Planificación</h3>
+        <p class="rt-card-text">Armamos el ciclo según tu objetivo, tu agenda y el equipo que tienes.</p>
+        <ul class="rt-card-list">
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Objetivo definido</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Volumen semanal</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Agenda realista</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <div class="rt-card-media">
+        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&amp;h=760&amp;q=72&amp;fit=crop" alt="Entrenamiento de sentadilla con técnica">
+        <span class="rt-card-badge">Sem 3–11</span>
+      </div>
+      <div class="rt-card-body">
+        <div class="rt-card-meta">
+          <span class="rt-card-ix">03</span>
+          <span class="rt-card-tag">1:1 u online</span>
+        </div>
+        <h3 class="rt-card-title">Ejecución</h3>
+        <p class="rt-card-text">Entrenas con técnica corregida y carga controlada, semana a semana.</p>
+        <ul class="rt-card-list">
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Técnica corregida</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>RIR / RPE por serie</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Sobrecarga progresiva</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <div class="rt-card-media">
+        <img src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=800&amp;h=760&amp;q=72&amp;fit=crop" alt="Anotando el registro de entrenamiento en el gimnasio">
+        <span class="rt-card-badge">Sem 12</span>
+      </div>
+      <div class="rt-card-body">
+        <div class="rt-card-meta">
+          <span class="rt-card-ix">04</span>
+          <span class="rt-card-tag">Cierre de ciclo</span>
+        </div>
+        <h3 class="rt-card-title">Ajuste</h3>
+        <p class="rt-card-text">Revisamos datos, feedback y recalibramos el ciclo siguiente.</p>
+        <ul class="rt-card-list">
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Datos del ciclo</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Feedback 1:1</li>
+          <li><svg class="ico ico-15"><use href="#i-check"/></svg>Recalibración</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <p class="rt-cycle-note">Y el ciclo vuelve a empezar.</p>
+</section>
+
+<!-- ============ testimonios ============ -->
+<section class="rt-band rt-band--dark rt-band--gap">
+  <div class="rt-band-in">
+    <div class="rt-eyebrow rt-eyebrow--dark">
+      <span class="rt-dot"></span>
+      <span class="rt-eyebrow-txt">Testimonios</span>
+    </div>
+    <h2 class="rt-h2 rt-h2--light rt-h2--14 rt-h2--sp">Historias de transformación</h2>
+
+    <div class="rt-scroll rt-tests" data-carousel="testimonios">
+      <article class="rt-test">
+        <div class="rt-test-body">
+          <p>«Llevaba tres años estancado. Con Ricardo entendí <em>por qué</em> hacía cada ejercicio y en seis meses subí 28 kg en sentadilla y dejé de tener dolor lumbar.»</p>
+          <div class="rt-test-foot">
+            <div class="rt-test-who">
+              <img src="assets/testimonio-javier.webp" alt="Javier Silva" style="object-position:center 25%">
+              <div class="rt-test-name">Javier Silva</div>
+            </div>
+            <div class="rt-arrows-dark" data-carousel-nav="testimonios">
+              <button class="rt-arrow-dark" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-16"><use href="#i-arrow-left"/></svg></button>
+              <button class="rt-arrow-dark rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-16"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-test">
+        <div class="rt-test-body">
+          <p>«Viajo dos semanas al mes y creía imposible mantener un plan. El modo flexible me dejó <em>sin excusas</em>: hoy entreno igual en el hotel que en el gimnasio.»</p>
+          <div class="rt-test-foot">
+            <div class="rt-test-who">
+              <img src="assets/testimonio-jaime.webp" alt="Jaime Nazar" style="object-position:center 28%">
+              <div class="rt-test-name">Jaime Nazar</div>
+            </div>
+            <div class="rt-arrows-dark" data-carousel-nav="testimonios">
+              <button class="rt-arrow-dark" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-16"><use href="#i-arrow-left"/></svg></button>
+              <button class="rt-arrow-dark rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-16"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-test">
+        <div class="rt-test-body">
+          <p>«Entrenaba piernas sin ver cambios. Ricardo me armó una rutina de <em>piernas y glúteo</em> con progresión real: en cinco meses gané volumen y por fin siento que trabajo el músculo correcto.»</p>
+          <div class="rt-test-foot">
+            <div class="rt-test-who">
+              <img src="assets/testimonio-elimar.webp" alt="Elimar Rangel" style="object-position:center 22%">
+              <div class="rt-test-name">Elimar Rangel</div>
+            </div>
+            <div class="rt-arrows-dark" data-carousel-nav="testimonios">
+              <button class="rt-arrow-dark" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-16"><use href="#i-arrow-left"/></svg></button>
+              <button class="rt-arrow-dark rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-16"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-test">
+        <div class="rt-test-body">
+          <p>«Iba al Smart Fit hace más de un año y no veía progreso: no sabía usar bien las máquinas ni <em>cuándo subir el peso</em>. Con Ricardo cada serie tiene técnica y un número al que llegar.»</p>
+          <div class="rt-test-foot">
+            <div class="rt-test-who">
+              <img src="assets/testimonio-wilmer.webp" alt="Wilmer López" style="object-position:center 30%">
+              <div class="rt-test-name">Wilmer López</div>
+            </div>
+            <div class="rt-arrows-dark" data-carousel-nav="testimonios">
+              <button class="rt-arrow-dark" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-16"><use href="#i-arrow-left"/></svg></button>
+              <button class="rt-arrow-dark rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-16"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-test">
+        <div class="rt-test-body">
+          <p>«Entre el trabajo y la casa apenas me quedaba tiempo. Ricardo me optimizó la rutina a <em>3 días y una hora por sesión</em>, y aun así avanzo más que cuando iba cinco veces sin rumbo.»</p>
+          <div class="rt-test-foot">
+            <div class="rt-test-who">
+              <img src="assets/testimonio-mildred.webp" alt="Mildred De las Salas" style="object-position:center 25%">
+              <div class="rt-test-name">Mildred De las Salas</div>
+            </div>
+            <div class="rt-arrows-dark" data-carousel-nav="testimonios">
+              <button class="rt-arrow-dark" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-16"><use href="#i-arrow-left"/></svg></button>
+              <button class="rt-arrow-dark rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-16"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ comunidad ============ -->
+<section class="rt-sec rt-community" id="comunidad">
+  <div class="rt-team-copy">
+    <div class="rt-eyebrow">
+      <span class="rt-dot"></span>
+      <span class="rt-eyebrow-txt rt-nowrap">Súmate</span>
+    </div>
+    <h2 class="rt-h2 rt-h2--14 rt-h2--sp-sm">Ellos ya empezaron</h2>
+    <div class="rt-team-text">
+      <p>Tu rutina debe adaptarse a tu vida, no al revés. Ya sea que prefieras la comodidad del formato <b>online o las sesiones presenciales</b>, aquí vas a tu ritmo y según tus objetivos.</p>
+      <p>Súmate a <b>nuestras actividades grupales</b> para compartir motivación, recargar buena energía y disfrutar de todo el proceso.</p>
+    </div>
+  </div>
+  <div class="rt-team-media" id="rt-team">
+    <img class="rt-team-img" src="assets/team-full.webp" width="2342" height="1792" loading="lazy" decoding="async" alt="Alumnos de Ricardo Training">
+    <img class="rt-team-sticker" src="assets/sticker-rayo.webp" alt="" aria-hidden="true">
+    <p class="rt-team-caption">Alumnos de Ricardo · Santiago</p>
+  </div>
+</section>
+
+<!-- ============ instagram ============ -->
+<section class="rt-sec" id="instagram">
+  <div class="rt-eyebrow">
+    <span class="rt-dot"></span>
+    <span class="rt-eyebrow-txt rt-nowrap">Instagram</span>
+  </div>
+  <div class="rt-head-row rt-head-row--sm">
+    <h2 class="rt-h2 rt-h2--16">Lo último del entrenamiento</h2>
+    <div class="rt-arrows" data-carousel-nav="instagram">
+      <button class="rt-arrow" type="button" data-dir="-1" aria-label="Anterior"><svg class="ico ico-18"><use href="#i-arrow-left"/></svg></button>
+      <button class="rt-arrow rt-arrow--accent" type="button" data-dir="1" aria-label="Siguiente"><svg class="ico ico-18"><use href="#i-arrow-right"/></svg></button>
+    </div>
+  </div>
+  <a class="rt-ig-handle" href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener"><svg class="ico ico-15"><use href="#i-camera"/></svg>@ricardotraining</a>
+
+  <div class="rt-scroll rt-ig-rail" data-carousel="instagram">
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-1.webp" alt="Publicación 1 de @ricardotraining" loading="lazy" decoding="async" style="object-position:50% 11%"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 1 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-2.webp" alt="Publicación 2 de @ricardotraining" loading="lazy" decoding="async" style="object-position:50% 12%"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 2 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-3.webp" alt="Publicación 3 de @ricardotraining" loading="lazy" decoding="async"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 3 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-4.webp" alt="Publicación 4 de @ricardotraining" loading="lazy" decoding="async"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 4 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-5.webp" alt="Publicación 5 de @ricardotraining" loading="lazy" decoding="async"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 5 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+    <article class="rt-ig-card">
+      <div class="rt-ig-media"><img src="assets/ig-6.webp" alt="Publicación 6 de @ricardotraining" loading="lazy" decoding="async"></div>
+      <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener" aria-label="Ver publicación 6 en Instagram">
+        <span>Ver en Instagram</span><svg class="ico ico-16"><use href="#i-arrow-up-right"/></svg>
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ precios ============ -->
+<section class="rt-sec" id="precios">
+  <div class="rt-eyebrow">
+    <span class="rt-dot"></span>
+    <span class="rt-eyebrow-txt">Precios</span>
+  </div>
+  <h2 class="rt-h2 rt-h2--14 rt-h2--sp-sm">Planes claros, sin letra chica</h2>
+  <p class="rt-sec-lead">Elige según tu objetivo y tu disponibilidad. Puedes cambiar de plan cuando quieras.</p>
+
+  <div class="rt-scroll rt-plans">
+    <div class="rt-plan">
+      <div class="rt-plan-head">
+        <div>
+          <h3 class="rt-plan-name">Evaluación inicial</h3>
+          <p class="rt-plan-sub">Para partir con diagnóstico</p>
+        </div>
+      </div>
+      <div class="rt-plan-price"><span class="rt-plan-amount">$25.000</span><span class="rt-plan-unit">sesión única</span></div>
+      <ul class="rt-plan-list">
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Videollamada de 30 minutos</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Screening de movilidad y lesiones</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Definición de objetivo y plazos</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Informe con recomendaciones</li>
+      </ul>
+      <a class="rt-plan-cta" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Agendar ahora<svg class="ico ico-15"><use href="#i-arrow-right"/></svg></a>
+    </div>
+
+    <div class="rt-plan rt-plan--dark">
+      <div class="rt-plan-head">
+        <div>
+          <h3 class="rt-plan-name">Fuerza y rendimiento</h3>
+          <p class="rt-plan-sub">El plan más elegido</p>
+        </div>
+        <span class="rt-plan-badge">Popular</span>
+      </div>
+      <div class="rt-plan-price"><span class="rt-plan-amount">$89.000</span><span class="rt-plan-unit">al mes</span></div>
+      <ul class="rt-plan-list">
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Programa mensual individualizado</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Ajustes semanales de cargas (RIR/RPE)</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Revisión de técnica por video</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Guía de alimentación de apoyo</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>WhatsApp directo conmigo</li>
+      </ul>
+      <a class="rt-plan-cta rt-plan-cta--light" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Inicia tu plan<svg class="ico ico-15"><use href="#i-arrow-right"/></svg></a>
+    </div>
+
+    <div class="rt-plan">
+      <div class="rt-plan-head">
+        <div>
+          <h3 class="rt-plan-name">Modo flexible</h3>
+          <p class="rt-plan-sub">Para agendas y viajes</p>
+        </div>
+      </div>
+      <div class="rt-plan-price"><span class="rt-plan-amount">$59.000</span><span class="rt-plan-unit">al mes</span></div>
+      <ul class="rt-plan-list">
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Rutinas de hotel, casa o gimnasio</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Bloques de 20, 40 y 60 minutos</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Progresión con peso corporal</li>
+        <li><svg class="ico ico-15"><use href="#i-check"/></svg>Check-in quincenal</li>
+      </ul>
+      <a class="rt-plan-cta" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Empezar<svg class="ico ico-15"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ conoce a Ricardo ============ -->
+<section class="rt-band rt-band--black rt-band--gap rt-band--clip" id="conoce">
+  <div class="rt-band-in">
+    <div class="rt-eyebrow rt-eyebrow--dark">
+      <span class="rt-dot"></span>
+      <span class="rt-eyebrow-txt rt-nowrap">Quién te entrena</span>
+    </div>
+
+    <div class="rt-cr-grid">
+      <div class="rt-cr-head">
+        <h2 class="rt-cr-title">Conoce a<br><em>Ricardo</em></h2>
+        <p class="rt-cr-kicker">Preparador físico titulado · Santiago de Chile</p>
+      </div>
+
+      <div class="rt-cr-photo">
+        <img src="assets/ricardo-portrait-gym.webp" alt="Ricardo en el gimnasio">
+      </div>
+
+      <div class="rt-cr-copy">
+        <p>Llevo ocho años entrenando a gente real: con pega, con hijos, con poco tiempo y con ganas de sentirse mejor.&nbsp;</p>
+        <p>Soy Preparador Físico Titulado, y eso se nota en algo simple: cada ejercicio que te doy tiene un porqué. <em>Biomecánica</em>, carga medida y una <em>progresión que puedes ver en números.</em></p>
+        <p>¿Mi parte favorita? La cara que pones el día que levantas eso que hace tres meses parecía imposible. Ahí ya no hay que convencerte de nada.</p>
+
+        <div class="rt-cr-stats">
+          <div><div class="rt-cr-stat">8</div><div class="rt-cr-statlbl">Años entrenando</div></div>
+          <div><div class="rt-cr-stat">120+</div><div class="rt-cr-statlbl">Personas guiadas</div></div>
+          <div><div class="rt-cr-stat">1:1</div><div class="rt-cr-statlbl">Siempre contigo</div></div>
+          <div><div class="rt-cr-stat">0</div><div class="rt-cr-statlbl">Planes copiados</div></div>
+        </div>
+
+        <div class="rt-chips">
+          <span>Fuerza</span>
+          <span>Rehabilitación</span>
+          <span>Recomposición</span>
+          <span>Acompañamiento</span>
+        </div>
+
+        <a class="rt-cr-cta" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Entrena conmigo<svg class="ico ico-16"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="rt-sec">
+  <div class="rt-faq-head">
+    <h2 class="rt-h2 rt-h2--16 rt-h2--faq">¿Tienes dudas? Aquí están las respuestas.</h2>
+  </div>
+  <div class="rt-faq" data-faq>
+    <div class="rt-faq-item is-open">
+      <button class="rt-faq-q" type="button" aria-expanded="true" aria-controls="faq-a-0">
+        <span class="rt-faq-ix">01</span>
+        <span class="rt-faq-txt">¿Cómo funciona el entrenamiento online?</span>
+        <span class="rt-faq-sign" aria-hidden="true">–</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-0">
+        <p>Partimos con la evaluación inicial para conocer tu historial, tu acceso a equipamiento y tus horarios. Con eso armo tu programa mensual, lo revisamos semana a semana y ajusto cargas según cómo respondes.</p>
+      </div>
+    </div>
+    <div class="rt-faq-item">
+      <button class="rt-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-1">
+        <span class="rt-faq-ix">02</span>
+        <span class="rt-faq-txt">Tengo poco tiempo, ¿cuántos días necesito?</span>
+        <span class="rt-faq-sign" aria-hidden="true">+</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-1">
+        <p>Con dos o tres sesiones de 45 a 60 minutos se logran resultados sostenidos. Lo importante no es el volumen total, sino la progresión y la consistencia.</p>
+      </div>
+    </div>
+    <div class="rt-faq-item">
+      <button class="rt-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2">
+        <span class="rt-faq-ix">03</span>
+        <span class="rt-faq-txt">¿Necesito ir a un gimnasio?</span>
+        <span class="rt-faq-sign" aria-hidden="true">+</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-2">
+        <p>No siempre. El plan se adapta al equipamiento que tengas: gimnasio completo, mancuernas en casa o solo peso corporal con el modo flexible.</p>
+      </div>
+    </div>
+    <div class="rt-faq-item">
+      <button class="rt-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3">
+        <span class="rt-faq-ix">04</span>
+        <span class="rt-faq-txt">¿Incluye plan de alimentación?</span>
+        <span class="rt-faq-sign" aria-hidden="true">+</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-3">
+        <p>Incluye guías de alimentación de apoyo orientadas a tu objetivo. Para pautas clínicas o patologías te derivo con nutricionistas con quienes trabajo.</p>
+      </div>
+    </div>
+    <div class="rt-faq-item">
+      <button class="rt-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4">
+        <span class="rt-faq-ix">05</span>
+        <span class="rt-faq-txt">¿Cómo revisas mi técnica a distancia?</span>
+        <span class="rt-faq-sign" aria-hidden="true">+</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-4">
+        <p>Grabas las series clave y las envías por WhatsApp. Te devuelvo correcciones concretas de posición, rango y tempo, y las aplicamos en la siguiente sesión.</p>
+      </div>
+    </div>
+    <div class="rt-faq-item">
+      <button class="rt-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5">
+        <span class="rt-faq-ix">06</span>
+        <span class="rt-faq-txt">¿En cuánto tiempo veo resultados?</span>
+        <span class="rt-faq-sign" aria-hidden="true">+</span>
+      </button>
+      <div class="rt-faq-a" id="faq-a-5">
+        <p>Las primeras mejoras de fuerza y técnica aparecen entre la semana 3 y 6. Los cambios visibles de composición corporal toman entre 8 y 12 semanas de trabajo constante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA final ============ -->
+<section class="rt-band rt-band--dark rt-band--gap" id="contacto">
+  <div class="rt-band-in">
+    <div class="rt-cta-grid">
+      <div class="rt-cta-col">
+        <h2 class="rt-cta-title">No es suerte,<br><em>es DISCIPLINA.</em></h2>
+        <p class="rt-cta-text">Agenda tu evaluación inicial y define un plan con criterio técnico: más fuerza, menos lesiones.</p>
+        <a class="rt-cta-btn" href="https://wa.link/3uc0zr" target="_blank" rel="noopener">Hablemos<svg class="ico ico-17"><use href="#i-calendar"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ footer ============ -->
+<footer class="rt-band rt-footer">
+  <div class="rt-band-in">
+    <div class="rt-foot-grid">
+      <div class="rt-foot-brand">
+        <img src="assets/logo.webp" alt="Ricardo Training">
+        <p>Entrenamiento personalizado y coaching online desde Santiago. Fuerza, rendimiento y hábitos que duran.</p>
+      </div>
+      <div class="rt-foot-col">
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#metodo">Método</a>
+        <a href="#precios">Precios</a>
+      </div>
+      <div class="rt-foot-col">
+        <h4>Recursos</h4>
+        <a href="#conoce">Sobre Ricardo</a>
+        <a href="#metodo">Metodología</a>
+        <a href="#contacto">Preguntas frecuentes</a>
+      </div>
+      <div class="rt-foot-col">
+        <h4>Contacto</h4>
+        <span class="rt-foot-line"><svg class="ico ico-15 rt-foot-ico"><use href="#i-mail"/></svg>hola@ricardotraining.cl</span>
+        <span class="rt-foot-line"><svg class="ico ico-15 rt-foot-ico"><use href="#i-map-pin"/></svg>Santiago, Chile</span>
+      </div>
+    </div>
+    <div class="rt-foot-bottom">
+      <div class="rt-social">
+        <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener"><svg class="ico ico-14"><use href="#i-camera"/></svg>Instagram</a>
+        <a href="https://wa.link/p4z7si" target="_blank" rel="noopener"><svg class="ico ico-14"><use href="#i-message-circle"/></svg>WhatsApp</a>
+        <a href="https://www.instagram.com/ricardotraining/" target="_blank" rel="noopener"><svg class="ico ico-14"><use href="#i-play-circle"/></svg>YouTube</a>
+      </div>
+    </div>
+    <p class="rt-copy">© 2026 Ricardo Training · Santiago, Chile</p>
+  </div>
+</footer>
+
+<!-- ============ WhatsApp widget ============ -->
+<div class="rt-wa">
+  <div class="rt-wa-panel" id="rt-wa-panel" hidden>
+    <div class="rt-wa-head">
+      <span class="rt-wa-avatar">
+        <img src="assets/ricardo-portrait-gym.webp" alt="Ricardo">
+        <span class="rt-wa-online"></span>
+      </span>
+      <span class="rt-wa-id">
+        <strong>Ricardo Training</strong>
+        <span>Responde en pocos minutos</span>
+      </span>
+      <button class="rt-wa-close" type="button" aria-label="Cerrar"><svg class="ico ico-16"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="rt-wa-thread">
+      <span class="rt-wa-dots" aria-hidden="true"></span>
+      <div class="rt-wa-bubble">
+        <p>¡Hola! me gustaría saber más del servicio.</p>
+        <span class="rt-wa-meta"><span id="rt-wa-time"></span><svg class="ico ico-14 rt-wa-tick"><use href="#i-check-check"/></svg></span>
+      </div>
+    </div>
+    <a class="rt-wa-send" href="https://wa.link/p4z7si" target="_blank" rel="noopener"><svg class="ico ico-16"><use href="#i-send"/></svg>Enviar por WhatsApp</a>
+  </div>
+  <button class="rt-wa-fab" type="button" id="rt-wa-fab" aria-label="Abrir chat de WhatsApp" aria-expanded="false" aria-controls="rt-wa-panel">
+    <svg class="ico ico-27"><use href="#i-message-circle"/></svg>
+  </button>
+</div>
+
+</body>
+</html>
